@@ -1,0 +1,32 @@
+version = 0.1
+[default]
+[default.pipeline_bootstrap]
+[default.pipeline_bootstrap.parameters]
+pipeline_user = "arn:aws:iam::374958087690:user/rus26"
+
+[dev]
+[dev.pipeline_bootstrap]
+[dev.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::374958087690:role/aws-sam-cli-managed-dev-pipe-PipelineExecutionRole-94NHNO9L4MGJ"
+cloudformation_execution_role = "arn:aws:iam::374958087690:role/aws-sam-cli-managed-dev-p-CloudFormationExecutionR-TLXA6QSFFUMZ"
+artifacts_bucket = "loan-app-fastapi"
+image_repository = ""
+region = "us-west-1"
+
+[stage]
+[stage.pipeline_bootstrap]
+[stage.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::374958087690:role/aws-sam-cli-managed-stage-pi-PipelineExecutionRole-XMYMKRBX6OCX"
+cloudformation_execution_role = "arn:aws:iam::374958087690:role/aws-sam-cli-managed-stage-CloudFormationExecutionR-B1FEYWDI2YL0"
+artifacts_bucket = "loan-app-fastapi"
+image_repository = ""
+region = "us-west-1"
+
+[prod]
+[prod.pipeline_bootstrap]
+[prod.pipeline_bootstrap.parameters]
+pipeline_execution_role = "arn:aws:iam::374958087690:role/aws-sam-cli-managed-prod-pip-PipelineExecutionRole-MA4ZREIJY7DW"
+cloudformation_execution_role = "arn:aws:iam::374958087690:role/aws-sam-cli-managed-prod-CloudFormationExecutionR-1289F54KHHH0U"
+artifacts_bucket = "loan-app-fastapi"
+image_repository = ""
+region = "us-west-1"
