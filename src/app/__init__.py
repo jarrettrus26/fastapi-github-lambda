@@ -12,7 +12,7 @@ app = FastAPI()
 
 clients = {
     1: {
-           "name": "Wayne Rooney2",
+           "name": "Wayne Rooney3",
            "dob": date(1985, 2, 5),
            "loan_amount": 50,
            }
